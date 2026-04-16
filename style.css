@@ -1,0 +1,90 @@
+#geoguessr-country-overlay {
+    position: fixed;
+    top: 12px;
+    right: 12px;
+    z-index: 2147483647;
+    width: 220px;
+    background: #18181b; /* Zinc 900 */
+    border: 1px solid #3f3f46; /* Zinc 700 */
+    border-radius: 6px;
+    padding: 10px 14px;
+    color: #f4f4f5;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    user-select: none;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+#geoguessr-country-overlay.hidden {
+    display: none !important;
+}
+
+#geoguessr-country-overlay .header {
+    font-size: 10px;
+    font-weight: 600;
+    color: #71717a; /* Zinc 500 */
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#geoguessr-country-overlay .header .hotkey-hint {
+    font-weight: 400;
+    opacity: 0.6;
+}
+
+#geoguessr-country-overlay .content {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+#geoguessr-country-overlay .country-name {
+    color: #ffffff;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+#geoguessr-country-overlay .coords {
+    font-family: "JetBrains Mono", "SF Mono", Menlo, Consolas, monospace;
+    font-size: 10px;
+    color: #a1a1aa; /* Zinc 400 */
+    display: block;
+    margin-top: 4px;
+    padding-top: 4px;
+    border-top: 1px solid #27272a; /* Zinc 800 */
+}
+
+#geoguessr-country-overlay.loading .country-name {
+    color: #71717a;
+    font-style: italic;
+}
+
+/* Minimal animation, no flashy glows */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-4px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+#geoguessr-country-overlay .attribution {
+    font-size: 9px;
+    color: #52525b;
+    margin-top: 8px;
+    padding-top: 6px;
+    border-top: 1px solid #27272a;
+    text-align: center;
+}
+
+#geoguessr-country-overlay .attribution a {
+    color: #71717a;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+#geoguessr-country-overlay .attribution a:hover {
+    color: #a1a1aa;
+    text-decoration: underline;
+}
