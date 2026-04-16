@@ -8,8 +8,6 @@
 // This is a Moterrry production
 
 (function () {
-    console.log('Map Discovery Pro: Interceptor initializing...');
-
     let lastCoords = { lat: 0, lng: 0 };
 
     function handleData(data, url) {
@@ -113,6 +111,4 @@
         });
         return originalSend.apply(this, arguments);
     };
-
-    console.log('Map Discovery Pro: Precision interceptors active.');
 })();
